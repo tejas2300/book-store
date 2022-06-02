@@ -1,0 +1,90 @@
+<form class="p-3 m-3" #courseForm="ngForm" (ngSubmit)="onSubmit()">
+  <h2 class="text-center">New Course</h2>
+  <div class="form-group mb-3">
+    <label for="course">Course</label>
+    <input
+      type="text"
+      class="form-control"
+      id="course"
+      name="course"
+      placeholder="Name course"
+      required
+      minlength="4"
+      maxlength="10"
+      [(ngModel)]="course"
+      #courseModel="ngModel"
+      [class.is-invalid]="
+        courseModel.invalid && (courseModel.dirty || courseModel.touched)
+      "
+      [class.is-valid]="
+        courseModel.valid && (courseModel.dirty || courseModel.touched)
+      "
+    />
+    <span
+      class="invalid-feedback"
+      *ngIf="(courseModel.touched || courseModel.dirty) && courseModel.errors?.['required']"
+      >Course name is mandatory.</span
+    >
+    <span
+      class="invalid-feedback"
+      *ngIf="(courseModel.touched || courseModel.dirty) && courseModel.errors?.['minlength']"
+      >Course name must be atleast 4 chars long.</span
+    >
+    <span
+      class="invalid-feedback"
+      *ngIf="(courseModel.touched || courseModel.dirty) && courseModel.errors?.['maxlength']"
+      >Course name must be maximum 10 chars long.</span
+    >
+  </div>
+  <div class="form-group mb-3">
+    <label for="technology">Technology</label>
+    <select
+      name="technology"
+      id="technology"
+      class="form-control"
+      [(ngModel)]="technology"
+    >
+      <option *ngFor="let t of technologies" [value]="t">{{ t }}</option>
+    </select>
+  </div>
+  <div class="form-group mb-3">
+    <label for="duration">Duration</label>
+    <input
+      name="duration"
+      type="number"
+      class="form-control"
+      id="duration"
+      placeholder="Duration in hours"
+      required
+      min="1"
+      [(ngModel)]="duration"
+    />
+  </div>
+  <div class="form-group mb-3">
+    <label for="description">Description</label>
+    <textarea
+      name="description"
+      id="description"
+      cols="30"
+      rows="5"
+      class="form-control"
+      required
+      [(ngModel)]="description"
+      #descriptionModel="ngModel"
+      [class.is-invalid]="
+        descriptionModel.invalid && (descriptionModel.dirty || descriptionModel.touched)
+      "
+      [class.is-valid]="
+        descriptionModel.valid && (descriptionModel.dirty || descriptionModel.touched)
+      "
+    ></textarea>
+    <span
+      class="invalid-feedback"
+      *ngIf="(descriptionModel.touched || descriptionModel.dirty) && descriptionModel.errors?.['required']"
+      >Description is mandatory.</span
+    >
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!courseForm.valid">
+    Create
+  </button>
+</form>
