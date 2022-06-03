@@ -11,9 +11,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { DashbordComponent } from './components/dashbord/dashbord.component';
+import { CorosoulComponent } from './components/corosoul/corosoul.component';
 
 @NgModule({
-  declarations: [AppComponent, TemplateFormsDemoComponent, LoginComponent, RegisterComponent, HomeComponent, NavComponent, PageNotFoundComponent, FooterComponent],
+  declarations: [AppComponent, TemplateFormsDemoComponent, LoginComponent, RegisterComponent, HomeComponent, NavComponent, PageNotFoundComponent, FooterComponent, DashbordComponent, CorosoulComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
