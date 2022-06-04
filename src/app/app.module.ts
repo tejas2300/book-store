@@ -11,10 +11,15 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { SliderComponent } from './slider/slider.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { CorslComponent } from './corsl/corsl.component';
 
 @NgModule({
-  declarations: [AppComponent, TemplateFormsDemoComponent, LoginComponent, RegisterComponent, HomeComponent, NavComponent, PageNotFoundComponent, FooterComponent],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  declarations: [AppComponent, TemplateFormsDemoComponent, LoginComponent, RegisterComponent, HomeComponent, NavComponent, PageNotFoundComponent, FooterComponent, DashbordComponent, SliderComponent],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule, NgbModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
