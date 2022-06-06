@@ -1,0 +1,14 @@
+
+<tr *ngFor="let e of lis">
+  <div *ngIf="e.cover_id != null">
+    <div class="card">
+      <div class="container">
+        <img src="https://covers.openlibrary.org/b/id/{{ e.cover_id }}-M.jpg" />
+        <h4>
+          <td>{{ e.title }}</td>
+        </h4>
+      </div>
+    </div>
+  </div>
+</tr>
+<!-- Tejas  -->

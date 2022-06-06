@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateFormsDemoComponent } from './components/template-forms-demo/template-forms-demo.component';
@@ -15,11 +15,34 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { SliderComponent } from './slider/slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APIComponent } from './api/api.component';
+import { BooksGetComponent } from './books-get/books-get.component';
 // import { CorslComponent } from './corsl/corsl.component';
 
 @NgModule({
-  declarations: [AppComponent, TemplateFormsDemoComponent, LoginComponent, RegisterComponent, HomeComponent, NavComponent, PageNotFoundComponent, FooterComponent, DashbordComponent, SliderComponent],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule, NgbModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    TemplateFormsDemoComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    NavComponent,
+    PageNotFoundComponent,
+    FooterComponent,
+    DashbordComponent,
+    SliderComponent,
+    APIComponent,
+    BooksGetComponent,
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
