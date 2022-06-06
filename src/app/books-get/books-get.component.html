@@ -1,0 +1,28 @@
+
+
+<tr *ngFor="let e of lis">
+  <div *ngIf="e.cover_id != null">
+    <div class="container">
+      <div class="main-card">
+        <div class="cards">
+          <div class="card">
+            <div class="content">
+              <div class="img">
+                <img
+                  src="https://covers.openlibrary.org/b/id/{{
+                    e.cover_id
+                  }}-M.jpg"
+                />
+              </div>
+              <div class="details">
+                <div class="name">
+                  <td>{{ e.title }}</td>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</tr>
