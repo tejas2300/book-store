@@ -1,0 +1,5 @@
+com\stackroute\capstone\CapstoneApplication.class
+com\stackroute\capstone\controllers\RegistrationController.class
+com\stackroute\capstone\services\RegistrationService.class
+com\stackroute\capstone\model\User.class
+com\stackroute\capstone\repository\RegistrationRepository.class
